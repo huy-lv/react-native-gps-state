@@ -1,5 +1,5 @@
 {
-  "name": "react-native-gps-state",
+  "name": "@tootsweet/react-native-gps-state",
   "description": "React Native Listener for GPS status changes",
   "version": "2.0.4",
   "main": "index.js",
