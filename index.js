@@ -95,7 +95,13 @@ const GPSState:GPSStateType = {
 		GPSStateNative.stopListen()
 	},
 	
-	getStatus:()=>GPSStateNative.getStatus(() => {}),
+	getStatus: async () => {
+    	return new Promise((resolve, reject) => {
+			GPSStateNative.getStatus((status) => {
+				resolve(status);
+			});
+		})
+	},
 	
 	requestAuthorization: (authType)=>{
 		if(isIOS){
