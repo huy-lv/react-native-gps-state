@@ -65,10 +65,6 @@ RCT_EXPORT_METHOD(stopListen){
 	self.manager.delegate = nil;
 }
 
-RCT_EXPORT_METHOD(getStatus:(RCTResponseSenderBlock)callback){
-	callback(@[ [self getLocationStatus] ]);
-}
-
 RCT_REMAP_METHOD(getStatus, getStatusWithResolver:(RCTPromiseResolveBlock)resolve rejecter:(RCTPromiseRejectBlock)reject) {
 	NSNumber *status = [self getLocationStatus];
 	if(status >= 0){
