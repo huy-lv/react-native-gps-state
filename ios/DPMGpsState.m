@@ -77,7 +77,7 @@ RCT_REMAP_METHOD(getStatus, getStatusWithResolver:(RCTPromiseResolveBlock)resolv
 	}
 }
 
-RCT_EXPORT_METHOD(openSettings){
+RCT_EXPORT_METHOD(openSettings:(BOOL)onlyUseForAndroid){
 	UIApplication *application = [UIApplication sharedApplication];
 	NSURL *url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
 	
